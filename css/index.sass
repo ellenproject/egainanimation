@@ -1,0 +1,1233 @@
+*
+    margin: 0
+    padding: 0
+    max-width: 100%
+    @import url(https://fonts.googleapis.com/earlyaccess/cwtexkai.css)
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&display=swap')
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap')
+@keyframes left1
+    0%
+        transform: translate(-50%, 0%)
+    100%
+        transform: translate(0%, 0%)
+@keyframes left2
+    0%
+        transform: translate(-100%, 0%)
+    100%
+        transform: translate(0%, 0%)
+@keyframes left3
+    0%
+        transform: translate(-180%, 0%)
+    100%
+        transform: translate(0%, 0%)
+@keyframes left4
+    0%
+        transform: translate(-360%, 0%)
+    100%
+        transform: translate(0%, 0%)
+@keyframes left5
+    0%
+        transform: translate(-500%, 0%)
+    100%
+        transform: translate(0%, 0%)
+@keyframes right0
+    0%
+        transform: translate(100%, -50%)
+    100%
+        transform: translate(0%, -50%)
+@keyframes right1
+    0%
+        transform: translate(80%, 0%)
+    100%
+        transform: translate(0%, 0%)
+@keyframes right2
+    0%
+        transform: translate(100%, 0%)
+    100%
+        transform: translate(0%, 0%)
+@keyframes right3
+    0%
+        transform: translate(120%, 0%)
+    100%
+        transform: translate(0%, 0%)
+@keyframes right4
+    0%
+        transform: translate(140%, 0%)
+    100%
+        transform: translate(0%, 0%)
+@keyframes top
+    0%
+        transform: translate(0%, -140%)
+    100%
+        transform: translate(0%, 0%)
+@keyframes blur
+    0%
+        opacity: 0.1
+        -webkit-filter: blur(12px)
+    100%
+        opacity: 1
+        -webkit-filter: blur(0px)
+@keyframes bgleft
+    0%
+        transform: translateX(0)
+        width: 51%
+        opacity: 0.5
+    100%
+        transform: translateX(-100%)
+        width: 0%
+        opacity: 1
+@keyframes bgright
+    0%
+        transform: translateX(0)
+        width: 51%
+        opacity: 0.5
+    100%
+        transform: translateX(100%)
+        width: 0%
+        opacity: 1
+
+
+body
+    position: relative
+    font-family: "cwTeXKai", serif
+    font-size: 24px
+    font-weight: 400
+    letter-spacing: .3rem
+    background-color: #242424
+    .loader
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 200px
+        z-index: 1030
+        transition: 8s ease-out
+        opacity: 0
+        display: block
+    .animate__animated
+        animation: fadeOut
+        animation-duration: 8s
+    .loader-none
+        display: none
+    .mobile-toggle
+        display: none
+        position: fixed
+        top: 20px
+        right: 20px
+        width: 45px
+        height: 45px
+        z-index: 20
+        cursor: pointer
+        .bar1, .bar2, .bar3
+            width: 100%
+            height: 8px
+            margin-bottom: 5px
+            background-color: #242424
+            transition: all 0.3s ease-in-out
+    .mobile-on .bar1
+        transform-origin: 10% 40%
+        transform: rotate(45deg)
+        background-color: #fff
+    .mobile-on .bar3
+        transform-origin: 10% 40%
+        transform: rotate(-45deg)
+        background-color: #fff
+    .mobile-on .bar2
+        background-color: transparent
+    nav
+        position: fixed
+        z-index: 10
+        background-color: #242424
+        opacity: 0.8
+        width: 100%
+        height: 100%
+        text-align: center
+        display: table
+        color: #FFF
+        // ul
+        //     display: table-cell
+        //     vertical-align: middle
+        //     padding-left: 0 !important
+        //     li
+        //         list-style: none
+        //         a
+        //             color: #FFF
+        //             text-decoration: none
+    .mobile-hide
+        display: none
+    .mobile-nav-wrapper
+        display: table-cell
+        vertical-align: middle
+        padding-left: 0 !important
+        .item
+            position: relative
+            cursor: pointer
+            margin: 20px
+            padding: 10px 20px
+            opacity: 0.5
+            color: #FFF
+        .mobile--1
+            width: 540px
+            padding: 60px
+            background: url(../img/index-logo-hover.png) center center / contain no-repeat
+        .mobile--2
+            width: 350px
+            background: url(../img/nav-clothes-hover.png) center center / contain no-repeat
+        .mobile--3
+            width: 350px
+            background: url(../img/nav-product-hover.png) center center / contain no-repeat
+        .mobile-contact
+            position: relative
+            display: flex
+            justify-content: center
+            font-family: 'Roboto', sans-serif
+            letter-spacing: 0rem
+            li
+                a
+                    cursor: pointer
+                    padding: 12px
+                    img
+                        width: 30px
+                        height: 30px
+                    span
+                        color: #FFF
+                        font-size: 1rem
+                img
+                    width: 30px
+                    height: 30px
+                &::before
+                    transform: scaleX(0)
+                    transform-origin: bottom right
+                &:hover
+                    transition: all .3s ease-in-out
+                    background-color: #922222
+                    opacity: 100% 
+                    
+            .mobile-contact--1
+                animation: right1 2.5s ease-in-out
+            .mobile-contact--2
+                animation: right2 2.5s ease-in-out
+            .mobile-contact--3
+                animation: right3 2.5s ease-in-out
+            .mobile-contact--4
+                animation: right4 2.5s ease-in-out
+            .mobile-contact--fb
+                position: relative
+                padding: 12px
+                display: block
+                align-items: center
+                justify-content: center
+                cursor: pointer
+                span
+                    color: #FFF
+                &:hover
+                    .fb-box
+                        // display: block
+                &::after
+                    content: ''
+                    position: absolute
+                    left: 50%
+                    bottom: 0
+                    display: block
+                    width: 10px
+                    height: 10px
+                    background: transparent url(../img/arrow-right.svg) center center no-repeat
+                    background-size: contain
+                    transform: rotate(-90deg) translateY(-50%)
+                .mobile-contact--fb-box
+                    position: absolute
+                    display: none
+                    left: 50%
+                    min-width: 250px
+                    transform: translateX(-50%)
+                    a
+                        background-color: #242424
+                        opacity: 0.8
+                        display: flex
+                        align-items: center
+                        img
+                            margin-right: 10px
+                    .fb1, .fb2
+                        &:hover
+                            background-color: #922222
+                .fb-box-on
+                    display: block
+    .nav
+        z-index: 5
+        position: relative
+        &__menu
+            width: 100%
+            position: absolute
+            display: flex
+            justify-content: center
+            // background-color: yellow
+            .item
+                position: relative
+                width: 390px
+                height: 68px
+                overflow: hidden
+                cursor: pointer
+                margin: 20px 30px
+                animation: top 8s ease-in-out
+                &::before, &::after
+                    z-index: -5
+                    content: ""
+                    position: absolute
+                    top: 0
+                    right: 0
+                    bottom: 0
+                    left: 0
+                    border-top: 38px solid #992222dc
+                    border-bottom: 38px solid #992222dc
+                    transition: all 1.5s ease-in-out
+                &::before
+                    border-right: 195px solid transparent
+                    transform: translateX(-100%)
+                &::after
+                    border-left: 195px solid transparent
+                    transform: translateX(100%)
+                &:hover
+                    &::before
+                        transform: translateX(-0%)
+                    &::after
+                        transform: translateX(0%)
+                // &:hover
+                //     span
+                //         transition: all .3s ease-in-out
+                //         background-color: #992222
+                //         width: 390px
+                //         height: 68px
+                //         position: absolute
+                //         z-index: -10
+                //         opacity: 0.5
+                //         animation: top 4s ease-in-out
+                .nav-bg
+                    mix-blend-mode: multiply
+            .top--1
+                display: none
+            .top--2
+                background: url(../img/nav-clothes.png) center center / contain no-repeat
+                &:hover
+                    transition: all .7s ease-in-out
+                    background: url(../img/nav-clothes-hover.png) center center / contain no-repeat
+            .top--3
+                background: url(../img/nav-product.png) center center / contain no-repeat
+                &:hover
+                    transition: all .7s ease-in-out
+                    background: url(../img/nav-product-hover.png) center center / contain no-repeat
+            .top--2--active
+                background: url(../img/nav-clothes-hover.png) center center / contain no-repeat
+                background-color: #992222
+            .top--3--active
+                background: url(../img/nav-product-hover.png) center center / contain no-repeat
+                background-color: #992222
+    .video
+        position: relative
+        height: 100vh
+        overflow: hidden
+        margin: auto
+        .showblock
+            position: relative
+            display: none
+            max-height: 0
+            opacity: 0
+            &--active
+                transition: all 3s ease-in-out
+                display: block
+                max-height: 1280px
+                opacity: 1
+                animation: blur 5s ease-in-out
+            &--bg
+                position: fixed
+                top: 0
+                height: 100%
+                background: #212529
+                z-index: 50
+                transform: translateX(100%)
+                &-left
+                    left: 0
+                    animation: bgleft 3s ease-in-out
+                &-right
+                    right: 0
+                    animation: bgright 4s ease-in-out
+            .video-source
+                // z-index: -99
+                // position: relative
+                // width: 100%
+                // height: 100%
+                // object-fit: fill
+                opacity: 1
+                display: block
+                transition: all .5s ease-in-out
+                width: 100%
+                source
+                    // position: fixed
+            .display
+                display: block
+            .show
+                opacity: 1
+            .video-tab
+                z-index: 10
+                .video-tab-list
+                    height: 100%
+                    position: absolute
+                    top: 50%
+                    left: 0%
+                    transform: translate(0,-50%)
+                    z-index: 5
+                    .index-logo
+                        width: 200px
+                        animation: left1 8s ease-in-out
+                        a
+                            padding: 40px 20px 40px 40px
+                            img
+                                cursor: pointer
+                    li
+                        position: relative
+                        height: 50px
+                        width: 180px
+                        cursor: pointer
+                        margin: 50px 0 50px 20px
+                        &::before
+                            transform: scaleX(0)
+                            transform-origin: bottom right
+                            content: ""
+                            display: block
+                            position: absolute
+                            top: 0
+                            right: 0
+                            bottom: 0
+                            left: 0
+                            background-color: rgba(153, 34, 34, 0.7)
+                            z-index: -5
+                            transition: transform .8s ease-in
+                            // opacity: 0.5
+                        &:hover
+                            &::before
+                                transform: scaleX(1)
+                                transform-origin: bottom left
+                        // &:hover
+                        //     span
+                        //         transition: all .3s ease-in-out
+                        //         background-color: rgb(153, 34, 34)
+                        //         height: 50px
+                        //         width: 180px
+                        //         position: absolute
+                        //         z-index: -10
+                        //         opacity: 0.5
+                        a
+                            padding: 0px 0 50px 0px
+                    .left--1, .left--6, .left--10
+                        animation: left1 3s ease-in-out
+                    .left--2, .left--7, .left--11
+                        animation: left2 4s ease-in-out
+                    .left--3, .left--8, .left--12
+                        animation: left3 5s ease-in-out
+                    .left--4, .left--9, .left--13
+                        animation: left4 6s ease-in-out
+                    .left--5, .left--14
+                        animation: left5 7s ease-in-out
+                    .left--1
+                        background: url(../img/nav-home-menu-1.png) center center / cover no-repeat
+                        &:hover
+                            background: url(../img/nav-home-menu-1-hover.png) center center / cover no-repeat
+                    .left--2
+                        background: url(../img/nav-home-menu-2.png) center center / cover no-repeat
+                        &:hover
+                            background: url(../img/nav-home-menu-2-hover.png) center center / cover no-repeat
+                    .left--3
+                        background: url(../img/nav-home-menu-3.png) center center / cover no-repeat
+                        &:hover
+                            background: url(../img/nav-home-menu-3-hover.png) center center / cover no-repeat
+                    .left--4
+                        background: url(../img/nav-home-menu-4.png) center center / cover no-repeat
+                        &:hover
+                            background: url(../img/nav-home-menu-4-hover.png) center center / cover no-repeat
+                    .left--5
+                        background: url(../img/nav-home-menu-5.png) center center / cover no-repeat
+                        &:hover
+                            background: url(../img/nav-home-menu-5-hover.png) center center / cover no-repeat
+                    .left--6
+                        background: url(../img/nav-clothes-menu-6.png) center center / cover no-repeat
+                        &:hover
+                            background: url(../img/nav-clothes-menu-6-hover.png) center center / cover no-repeat
+                    .left--7
+                        background: url(../img/nav-clothes-menu-7.png) center center / cover no-repeat
+                        &:hover
+                            background: url(../img/nav-clothes-menu-7-hover.png) center center / cover no-repeat
+                    .left--8
+                        background: url(../img/nav-clothes-menu-8.png) center center / cover no-repeat
+                        &:hover
+                            background: url(../img/nav-clothes-menu-8-hover.png) center center / cover no-repeat
+                    .left--9
+                        background: url(../img/nav-clothes-menu-9.png) center center / cover no-repeat
+                        &:hover
+                            background: url(../img/nav-clothes-menu-9-hover.png) center center / cover no-repeat
+                    .left--10
+                        background: url(../img/nav-product-menu-10.png) center center / cover no-repeat
+                        &:hover
+                            background: url(../img/nav-product-menu-10-hover.png) center center / cover no-repeat
+                    .left--11
+                        background: url(../img/nav-product-menu-11.png) center center / cover no-repeat
+                        &:hover
+                            background: url(../img/nav-product-menu-11-hover.png) center center / cover no-repeat
+                    .left--12
+                        background: url(../img/nav-product-menu-12.png) center center / cover no-repeat
+                        &:hover
+                            background: url(../img/nav-product-menu-12-hover.png) center center / cover no-repeat
+                    .left--13
+                        background: url(../img/nav-product-menu-13.png) center center / cover no-repeat
+                        &:hover
+                            background: url(../img/nav-product-menu-13-hover.png) center center / cover no-repeat
+                    .left--14
+                        background: url(../img/nav-product-menu-14.png) center center / cover no-repeat
+                        &:hover
+                            background: url(../img/nav-product-menu-14-hover.png) center center / cover no-repeat
+                    .index-back
+                        height: 50px
+                        background: url(../img/nav-index.png) center center / contain no-repeat
+                        cursor: pointer
+                        animation: left5 8s ease-in-out
+                        &:hover
+                            transition: all .7s ease-in-out
+                            opacity: 0.5
+            .active
+                display: block
+            .video-contact
+                z-index: 10
+                font-family: 'Roboto', sans-serif
+                letter-spacing: 0rem
+                .video-contact-list
+                    position: absolute
+                    top: 50%
+                    right: 0%
+                    transform: translate(0,-50%)
+                    background-color: #242424
+                    opacity: 0.5
+                    border-radius: 25px 0 0 25px
+                    padding: 20px 0px
+                    text-align: center
+                    animation: right0 7s ease-in-out
+                    li
+                        a
+                            cursor: pointer
+                            padding: 12px
+                            img
+                                width: 30px
+                                height: 30px
+                            span
+                                color: #FFF
+                                font-size: 1rem
+                        img
+                            width: 30px
+                            height: 30px
+                        &:hover
+                            transition: all .3s ease-in-out
+                            background-color: #922222
+                            opacity: 100%
+                    .right--1
+                        animation: right1 6s ease-in-out
+                    .right--2
+                        animation: right2 6s ease-in-out
+                    .right--3
+                        animation: right3 6s ease-in-out
+                    .right--4
+                        animation: right4 6s ease-in-out
+                    .fb
+                        position: relative
+                        padding: 12px
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        cursor: pointer
+                        span
+                            color: #FFF
+                        &:hover
+                            .fb-box
+                                // display: block
+                        &::after
+                            content: ''
+                            position: absolute
+                            left: 0px
+                            top: calc(50% - 5px)
+                            display: block
+                            width: 10px
+                            height: 10px
+                            background: transparent url(../img/arrow-right.svg) center center no-repeat
+                            background-size: contain
+                        .fb-box
+                            position: absolute
+                            display: none
+                            right: 100%
+                            min-width: 250px
+                            a
+                                background-color: #242424
+                                opacity: 0.8
+                                display: flex
+                                align-items: center
+                                img
+                                    margin-right: 10px
+                            .fb1, .fb2
+                                &:hover
+                                    background-color: #922222
+                        .fb-box-on
+                            display: block
+                    .video-mute
+                        z-index: 5
+                        width: 30px
+                        height: 30px
+                        margin: 0 auto
+                        padding: 5px 0px
+                        animation: right4 12s ease-in-out
+                        .play, .pause, .bgm
+                            display: none
+                            cursor: pointer
+                        .active
+                            display: block
+                            cursor: pointer
+            .popup
+                // background-color: rgba(94, 110, 141, 0.9)
+                // position: fixed
+                // left: 0
+                // top: 0
+                height: 100%
+                width: 100%
+                position: absolute
+                left: 50%
+                top: 50%
+                transform: translate(-50%, -50%)
+                opacity: 0
+                visibility: hidden
+                transition: opacity 0.3s 0s, visibility 0s 0.3
+                .popup__inner
+                    // position: relative
+                    // width: 90%
+                    // max-width: 400px
+                    // margin: 4em auto
+                    // transform: translateY(-40px)
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    border-radius: .25em .25em .4em .4em
+                    text-align: center
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
+                    transition-property: transform
+                    transition-duration: 0.3s
+                    padding: 20px 80px 50px 80px
+                    background: url(../img/background.jpg) center center / cover no-repeat
+                .popup__inner, .popup--1__inner
+                    width: 60%
+                    transform: translate(-50%, -50%)
+                    span
+                        opacity: 0
+                    .close, .close1, .close2, .close3, .close4
+                        position: absolute
+                        top: 8px
+                        right: 8px
+                        width: 30px
+                        height: 30px
+                        background: url(../img/close.png) center center / cover no-repeat
+                        &::before
+                            // content: ''
+                            // position: absolute
+                            // top: 12px
+                            // width: 14px
+                            // height: 3px
+                            // background-color: #8f9cb5
+                    .content
+                        position: relative
+                        font-family: 'Noto Serif TC', serif
+                        color: #242424
+                        .subtitle
+                            font-size: 2.2rem
+                            font-weight: 700
+                            letter-spacing: 0px
+                            padding: 30px 0px 60px
+                            text-align-last: justify
+                        .info
+                            display: flex
+                            .info-img
+                                position: relative
+                                width: 50%
+                                // background-color: beige
+                                margin: auto
+                                img
+                                    width: 100%
+                            .info-text
+                                position: relative
+                                width: 50%
+                                padding: 0px 0px 0px 20px
+                                // background-color: pink
+                                h5
+                                    font-size: 2rem
+                                    font-weight: 900
+                                    padding: 0px 0px 24px
+                                    letter-spacing: 0rem
+                                    text-align-last: justify
+                                p
+                                    font-size: 1.2rem
+                                    font-weight: 400
+                                    text-align: left
+                                    line-height: 1.5rem
+                                a
+                                    font-size: 1.2rem
+                                    font-weight: 600
+                                    width: 50%
+                                    padding: 5px 20px 10px
+                                    margin: 20px auto 0px
+                                    text-decoration: none
+                                    color: #FFF
+                                    background-color: #922222
+                                    opacity: 0.8
+                                    border-radius: 25px
+                                    box-shadow: 0px 3px 2px #646464
+                                    position: absolute
+                                    bottom: 0
+                                    left: 50%
+                                    transform: translateX(-50%)
+                                    &:hover
+                                        transition: all .3s ease-in-out
+                                        opacity: 1
+                                        box-shadow: 0px 3px 2px #ebebeb
+                .popup--2__inner
+                    width: 80%
+                    transform: translate(-45%, -50%)
+                    .content
+                        position: relative
+                        font-family: 'Noto Serif TC', serif
+                        display: flex
+                        .news, .videos
+                            // background-color: beige
+                            width: 50%
+                            .news-post, .videos-post
+                                display: flex
+                                background-color: #f8f8f8
+                                .news-post__inner, .videos-post__inner
+                                    width: 50%
+                                    padding: 30px
+                                    text-align: center
+                                    img
+                                        margin: 0 auto
+                                    h3
+                                        .title
+                                            color: #242424
+                                            font-size: 1.7rem
+                                            line-height: 2.2rem
+                                            font-weight: 700
+                                            padding: 20px 0px
+                                            text-align: left
+                                            letter-spacing: 2px
+                                    p
+                                        font-size: 20px
+                                        line-height: 1.5rem
+                                        display: -webkit-box
+                                        -webkit-box-orient: vertical
+                                        -webkit-line-clamp: 2
+                                        overflow: hidden
+                                        text-align: left
+                                    .span
+                                        font-size: 15px
+                                        color: #633b00
+                                        padding: 20px 0px
+                        .news
+                            margin: 0px 10px 0px 0px
+                        .videos
+                            margin: 0px 0px 0px 10px
+                            .videos-post
+                                .videos-post__inner
+                                    iframe
+                                    h3
+                                    p
+                                    .span
+                        .button
+                            font-size: 24px
+                            font-weight: 600
+                            width: 50%
+                            padding: 5px 20px 10px
+                            margin: 20px auto
+                            text-decoration: none
+                            color: #FFF
+                            background-color: #922222
+                            opacity: 0.8
+                            border-radius: 25px
+                            box-shadow: 0px 3px 2px #646464
+                            &:hover
+                                transition: all .3s ease-in-out
+                                opacity: 1
+                                box-shadow: 0px 3px 2px #ebebeb
+                .popup--3__inner
+                    width: 60%
+                    transform: translate(-50%, -50%)
+                    .content
+                        a
+                            margin: 20px auto
+                .popup--4__inner, .popup--5__inner, .popup--6__inner, .popup--7__inner, .popup--8__inner, .popup--9__inner, .popup--10__inner, .popup--11__inner, .popup--12__inner
+                    width: 40%
+                    transform: translate(-50%, -50%)
+                    padding: 0px
+                    .content
+                        position: relative
+                        font-family: 'Noto Serif TC', serif
+                        padding: 20px 80px 50px 80px
+                        .subtitle
+                            font-size: 60px
+                            font-weight: 700
+                            padding: 20px 0px 10px
+                        h3
+                            font-size: 30px
+                            font-weight: 700
+                            padding: 10px 0px
+                            color: #992222
+                            text-align-last: justify
+                        img
+                            width: 70%
+                            padding: 10px 0px
+                        p
+                            font-size: 20px
+                            line-height: 1.8rem
+                            width: 70%
+                            padding: 10px 0px
+                            margin: 0 auto
+                        a
+                            font-size: 24px
+                            font-weight: 600
+                            width: 50%
+                            padding: 5px 20px 10px
+                            margin: 20px auto 40px
+                            text-decoration: none
+                            color: #FFF
+                            background-color: #922222
+                            border-radius: 25px
+                            opacity: 0.8
+                            box-shadow: 0px 3px 2px #646464
+                            &:hover
+                                transition: all .3s ease-in-out
+                                opacity: 1
+                                box-shadow: 0px 3px 2px #ebebeb
+            .is-visible
+                opacity: 1
+                visibility: visible
+                transition: opacity 0.3s 0s, visibility 0s 0s
+        .showblock--1, .showblock--2, .showblock--3
+            animation: blur 2s ease-in-out
+        // .video-mute
+        //     z-index: 5
+        //     position: absolute
+        //     bottom: 100px
+        //     right: 100px
+        //     width: 30px
+        //     height: 30px
+        //     .play, .pause, .bgm
+        //         display: none
+        //         cursor: pointer
+        //     .active
+        //         display: block
+        //         cursor: pointer
+
+                    
+@media (min-width: 576px) and (max-width: 1024.98px)
+    body
+        .loader
+            display: none
+        .mobile-toggle
+            display: block
+            .bar1, .bar2, .bar3
+                width: 80%
+                height: 4px
+        .mobile-on .bar1
+            transform-origin: 15% 40%
+        .mobile-on .bar3
+            transform-origin: 15% 40%
+        .mobile-on .bar2
+        nav
+            opacity: 0.9
+        .mobile-hide
+        .mobile-nav-wrapper
+            .item
+                width: 300px
+                margin: 10px auto
+                padding: 30px 10px
+                img
+                    display: none
+            .mobile-contact
+                li
+                    a
+                        img
+                            width: 30px
+                            height: 30px
+        .nav
+            display: none
+            &__menu
+                .item
+        .video
+            .showblock
+                &--active
+                .video-source
+                    source
+                .display
+                    display: block
+                .show
+                    opacity: 1
+                .video-tab
+                    .video-tab-list
+                        font-size: 18px
+                        .index-logo
+                            width: 110px
+                            a
+                                padding: 10px 10px 5px 40px
+                        li
+                            width: 130px
+                            height: 20px
+                            opacity: 0.7
+                            padding: 0px 0px
+                            margin: 10px 0 10px 20px
+                            border-radius: 10px
+                            a
+                        .video-mute
+                            padding: 5px 10px
+                            margin: 10px 0 10px 20px
+                            .play, .pause, .bgm
+                                display: none
+                                .svg
+                                    width: 20px
+                                    height: 20px
+                            .active
+                                display: block
+                .video-contact
+                    display: none
+                    .video-contact-list
+                        li
+                            a
+                                img
+                            &:hover
+                .popup
+                    .popup__inner
+                        padding: 0px 10px
+                    .popup__inner, .popup--1__inner
+                        transform: translate(-45%, -50%)
+                        span
+                        .close, .close1, .close2, .close3, .close4
+                            &::before
+                        .content
+                            .subtitle
+                                font-size: 22px
+                                padding: 10px 0px
+                            .info
+                                display: block
+                                .info-img
+                                    img
+                                .info-text
+                                    width: 100%
+                                    h5
+                                        font-size: 16px
+                                        padding: 5px 0px
+                                    p
+                                        font-size: 15px
+                                        padding: 7px
+                                        line-height: 1.0rem
+                                    a
+                                        font-size: 18px
+                                        width: 80%
+                                        padding: 5px 10px 8px
+                                        margin: 5px auto
+                    .popup--2__inner
+                        width: 65%
+                        transform: translate(-45%, -50%)
+                        .content
+                            display: flex
+                            .news, .videos
+                                width: 100%
+                                .news-post, .videos-post
+                                    .news-post__inner, .videos-post__inner
+                                        width: 100%
+                                        padding: 10px
+                                        text-align: center
+                                        img
+                                            margin: 0 auto
+                                        h3
+                                            .subtitle
+                                                font-size: 16px
+                                                line-height: 1.2rem
+                                                padding: 10px 0px
+                                        p
+                                            font-size: 16px
+                                            line-height: 1.0rem
+                                        .span
+                                            font-size: 13px
+                                            padding: 10px 0px
+                                    .news-post__inner--2, .videos-post__inner--2
+                                        display: none
+                            .videos
+                                .videos-post
+                                    .videos-post__inner
+                                        iframe
+                                        h3
+                                            padding: 0px 0px
+                                        p
+                                        .span
+                            .button
+                                font-size: 16px
+                                font-weight: 600
+                                width: 80%
+                                padding: 5px 20px 10px
+                                margin: 5px auto
+                    .popup--3__inner
+                        width: 60%
+                        transform: translate(-50%, -50%)
+                        .content
+                            a
+                                width: 80%
+                                margin: 20px auto
+                    .popup--4__inner, .popup--5__inner, .popup--6__inner, .popup--7__inner, .popup--8__inner, .popup--9__inner, .popup--10__inner, .popup--11__inner, .popup--12__inner
+                        .content
+                            h2
+                                font-size: 24px
+                                font-weight: 700
+                            h3
+                                font-size: 16px
+                                font-weight: 700
+                                padding: 5px 0px
+                            img
+                                width: 50%
+                                padding: 5px 0px
+                            p
+                                font-size: 16px
+                                line-height: 1.3rem
+                                letter-spacing: .1rem
+                                width: 100%
+                                padding: 5px 0px
+                                margin: 0 auto
+                            a
+                                font-size: 16px
+                                font-weight: 600
+                                width: 60%
+                                padding: 5px 10px 8px
+                                margin: 10px auto
+
+@media (max-width: 575.98px)
+    body
+        background-color: #242424
+        .loader
+            display: none
+        .mobile-toggle
+            display: block
+            .bar1, .bar2, .bar3
+                width: 80%
+                height: 4px
+        .mobile-on .bar1
+            transform-origin: 15% 40%
+        .mobile-on .bar3
+            transform-origin: 15% 40%
+        .mobile-on .bar2
+        nav
+            opacity: 0.9
+        .mobile-hide
+        .mobile-nav-wrapper
+            .item
+                width: 300px
+                margin: 10px auto
+                opacity: 100%
+                padding: 30px 10px
+                font-size: 24px
+                img
+                    display: none
+            .mobile--1
+                padding: 50px 0px
+            .mobile-contact
+                li
+                    a
+                        img
+                            width: 30px
+                            height: 30px
+        .nav
+            display: none
+            &__menu
+                .item
+        .video
+            position: relative
+            .showblock
+                position: relative
+                &--active
+                .video-source
+                    position: relative
+                    source
+                .video-tab
+                    position: relative
+                    z-index: 0
+                    .video-tab-list
+                        position: relative
+                        width: 100%
+                        font-size: 18px
+                        top: 0
+                        left: 0
+                        transform: translate(0, 0)
+                        text-align: center
+                        li
+                            width: 150px
+                            height: 40px
+                            background-color: transparent
+                            opacity: 0.7
+                            padding: 0px 0px
+                            margin: 0 auto
+                            border-radius: 0px
+                            &:hover
+                                span
+                                    background-color: transparent
+                            a
+                        .left--1
+                            background: url(../img/nav-home-menu-1-hover.png) center center / cover no-repeat
+                        .left--2
+                            background: url(../img/nav-home-menu-2-hover.png) center center / cover no-repeat
+                        .left--3
+                            background: url(../img/nav-home-menu-3-hover.png) center center / cover no-repeat
+                        .left--4
+                            background: url(../img/nav-home-menu-4-hover.png) center center / cover no-repeat
+                        .left--5
+                            background: url(../img/nav-home-menu-5-hover.png) center center / cover no-repeat
+                        .left--6
+                            background: url(../img/nav-clothes-menu-6-hover.png) center center / cover no-repeat
+                        .left--7
+                            background: url(../img/nav-clothes-menu-7-hover.png) center center / cover no-repeat
+                        .left--8
+                            background: url(../img/nav-clothes-menu-8-hover.png) center center / cover no-repeat
+                        .left--9
+                            background: url(../img/nav-clothes-menu-9-hover.png) center center / cover no-repeat
+                        .left--10
+                            background: url(../img/nav-product-menu-10-hover.png) center center / cover no-repeat
+                        .left--11
+                            background: url(../img/nav-product-menu-11-hover.png) center center / cover no-repeat
+                        .left--12
+                            background: url(../img/nav-product-menu-12-hover.png) center center / cover no-repeat
+                        .left--13
+                            background: url(../img/nav-product-menu-13-hover.png) center center / cover no-repeat
+                        .left--14
+                            background: url(../img/nav-product-menu-14-hover.png) center center / cover no-repeat
+                        .video-mute
+                            padding: 10px 10px
+                            margin: 0 auto
+                            .play, .pause, .bgm
+                                display: none
+                                .svg
+                                    width: 15px
+                                    height: 15px
+                            .active
+                                display: block
+                    .index-logo
+                        display: none
+                .video-contact
+                    display: none
+                    .video-contact-list
+                        li
+                            a
+                                img
+                            &:hover
+                .popup
+                    .popup__inner
+                        padding: 0px 10px
+                    .popup__inner, .popup--1__inner
+                        top: 40%
+                        transform: translate(-50%, -40%)
+                        width: 90%
+                        span
+                        .close, .close1, .close2, .close3, .close4
+                            &::before
+                        .content
+                            .subtitle
+                                font-size: 16px
+                                padding: 8px 0px
+                            .info
+                                display: block
+                                .info-img
+                                    img
+                                .info-text
+                                    width: 100%
+                                    h5
+                                        font-size: 16px
+                                        padding: 5px 0px
+                                    p
+                                        font-size: 15px
+                                        padding: 7px
+                                        line-height: 1.0rem
+                                    a
+                                        font-size: 18px
+                                        width: 80%
+                                        padding: 5px 10px 8px
+                                        margin: 5px auto
+                    .popup--2__inner
+                        width: 90%
+                        top: 40%
+                        transform: translate(-50%, -40%)
+                        .content
+                            display: flex
+                            .news, .videos
+                                width: 100%
+                                .news-post, .videos-post
+                                    .news-post__inner, .videos-post__inner
+                                        width: 100%
+                                        padding: 10px
+                                        text-align: center
+                                        img
+                                            margin: 0 auto
+                                            width: 100%
+                                        h3
+                                            .subtitle
+                                                font-size: 16px
+                                                line-height: 1.2rem
+                                                padding: 10px 0px
+                                        p
+                                            font-size: 16px
+                                            line-height: 1.0rem
+                                            display: none
+                                        .span
+                                            font-size: 13px
+                                            padding: 10px 0px
+                                    .news-post__inner--2, .videos-post__inner--2
+                                        display: none
+                            .videos
+                                .videos-post
+                                    .videos-post__inner
+                                        iframe
+                                        h3
+                                            padding: 0px 0px
+                                        p
+                                        .span
+                            .button
+                                font-size: 14px
+                                font-weight: 600
+                                width: 100%
+                                padding: 5px 20px 10px
+                                margin: 5px auto
+                    .popup--3__inner
+                        width: 90%
+                        top: 40%
+                        transform: translate(-50%, -40%)
+                        .content
+                            a
+                                width: 100%
+                                margin: 20px auto
+                    .popup--4__inner, .popup--5__inner, .popup--6__inner, .popup--7__inner, .popup--8__inner, .popup--9__inner, .popup--10__inner, .popup--11__inner
+                        transform: translate(-50%, -30%)
+                        .content
+                            h2
+                                font-size: 24px
+                                font-weight: 700
+                            h3
+                                font-size: 16px
+                                font-weight: 700
+                                padding: 5px 0px
+                            img
+                                width: 50%
+                                padding: 5px 0px
+                            p
+                                font-size: 16px
+                                line-height: 1.3rem
+                                letter-spacing: .1rem
+                                width: 100%
+                                padding: 5px 0px
+                                margin: 0 auto
+                            a
+                                font-size: 16px
+                                font-weight: 600
+                                width: 60%
+                                padding: 5px 10px 8px
+                                margin: 10px auto
